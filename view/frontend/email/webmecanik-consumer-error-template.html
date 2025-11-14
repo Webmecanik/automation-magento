@@ -1,0 +1,11 @@
+<!--@subject {{trans "Webmecanik Consumer Error"}} @-->
+<!--@vars {} @-->
+
+{{template config_path="design/email/header_template"}}
+<h1>Erreur Webmecanik Consumer</h1>
+<p>Date de la dernière erreur : {{var updated_at}}</p>
+
+<pre>
+    {{var rejection_message}}
+</pre>
+{{template config_path="design/email/footer_template"}}

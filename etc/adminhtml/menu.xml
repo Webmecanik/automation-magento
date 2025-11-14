@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Webmecanik_Connector::all" title="Webmecanik queue list" module="Webmecanik_Connector"
+             parent="Magento_Backend::system_tools" resource="Webmecanik_Connector::all" translate="title"
+             action="webmecanik/queue/index"/>
+    </menu>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_save_commit_after">
+        <observer name="webmecanik-publish-contact-on-save"
+                  instance="Webmecanik\Connector\Observer\PublishCustomerOnSave"/>
+    </event>
+    <event name="customer_address_save_commit_after">
+        <observer name="webmecanik-publish-customer-address-on-save"
+                  instance="Webmecanik\Connector\Observer\PublishCustomerAddressOnSave"/>
+    </event>
+    <event name="newsletter_subscriber_save_after">
+        <observer name="webmecanik-publish-on-subscribe"
+                  instance="Webmecanik\Connector\Observer\PublishOnNewsletterSubscribe"/>
+    </event>
+</config>

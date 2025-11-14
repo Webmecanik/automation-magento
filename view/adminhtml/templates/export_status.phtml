@@ -1,0 +1,16 @@
+<?php
+/** @var Magento\Framework\View\Element\Template $block */
+/** @var Webmecanik\Connector\ViewModel\Notice $noticeViewModel */
+
+$noticeViewModel = $block->getData('noticeViewModel');
+?>
+
+<?php if (!$noticeViewModel->isExportEnabled()): ?>
+    <div class="message message-error" style="margin-bottom:20px;">
+        <span>Export vers Webmecanik actuellement désactivé. Button "Retry all failed messages" pour réactiver</span>
+    </div>
+<?php else: ?>
+    <div class="message message-success" style="margin-bottom:20px;">
+        <span>Export vers Webmecanik actuellement activé.</span>
+    </div>
+<?php endif; ?>

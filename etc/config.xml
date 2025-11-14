@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <webmecanik_connector>
+            <general>
+                <enable_publisher>0</enable_publisher>
+                <enable_export>0</enable_export>
+                <enable_retry_all>1</enable_retry_all>
+                <stop_export_on_error>1</stop_export_on_error>
+            </general>
+        </webmecanik_connector>
+        <system>
+            <mysqlmq>
+                <failed_messages_lifetime>2592000</failed_messages_lifetime>
+            </mysqlmq>
+        </system>
+    </default>
+</config>

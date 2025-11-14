@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Webmecanik Queue list</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block name="export_status" template="Webmecanik_Connector::export_status.phtml">
+                <arguments>
+                    <argument name="noticeViewModel" xsi:type="object">Webmecanik\Connector\ViewModel\Notice</argument>
+                </arguments>
+            </block>
+            <uiComponent name="webmecanik_queue_list"/>
+        </referenceContainer>
+    </body>
+</page>

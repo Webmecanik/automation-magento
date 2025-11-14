@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <consumer name="contact.updated" queue="webmecanik_contact_updated" connection="db"
+              consumerInstance="Magento\Framework\MessageQueue\Consumer"
+              handler="Webmecanik\Connector\Model\ConsumerContact::process"/>
+</config>

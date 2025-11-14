@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="webmecanik_connector" showInDefault="1" sortOrder="100">
+            <label>Webmecanik</label>
+            <tab>general</tab>
+            <resource>Webmecanik_Connector::all</resource>
+            <group id="general" showInDefault="1" canRestore="1">
+                <label>General</label>
+                <field id="enable_publisher" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enable all module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_export" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enable export</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_retry_all" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enable Retry All</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="stop_export_on_error" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Stop export on error</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_debug" translate="label" type="select" showInDefault="1" canRestore="1">
+                    <label>Enable debug</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" showInDefault="1" canRestore="1">
+                    <label>Client ID</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="client_secret" translate="label" type="text" showInDefault="1" canRestore="1">
+                    <label>Client Secret</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="mautic_url" translate="label" type="text" showInDefault="1" canRestore="1">
+                    <label>Mautic Url</label>
+                    <validate>required-entry validate-url</validate>
+                </field>
+                <field id="oauth2_authorize" translate="label" type="button" showInDefault="1">
+                    <label>Authorize</label>
+                    <frontend_model>Webmecanik\Connector\Block\Adminhtml\System\Config\AuthenticateBtn</frontend_model>
+                </field>
+                <field id="oauth2_test" translate="label" type="button" showInDefault="1">
+                    <label>Test API</label>
+                    <frontend_model>Webmecanik\Connector\Block\Adminhtml\System\Config\TestBtn</frontend_model>
+                </field>
+                <field id="oauth2_access_token" translate="label" type="text" showInDefault="1" canRestore="1">
+                    <label>Oauth2 Access Token</label>
+                </field>
+                <field id="error_recipient_email" type="text" showInDefault="1" canRestore="1">
+                    <label>Error notification Recipient email</label>
+                    <validate>required-entry validate-email</validate>
+                </field>
+                <field id="webhook_secret_key" type="text" showInDefault="1" canRestore="1">
+                    <label>Webhook Secret Key</label>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
